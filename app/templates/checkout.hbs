@@ -1,2 +1,5 @@
 <h3>cart</h3>
-{{ display-cart }}
+{{#each model.items as |item|}}
+  <h5>something</h5>
+  {{ display-cart item=item }}
+{{/each}}
