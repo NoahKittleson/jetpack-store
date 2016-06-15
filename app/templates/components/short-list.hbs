@@ -1,0 +1,19 @@
+<h3>Products</h3>
+
+{{#if selectedProduct}}
+  <h2>{{selectedProduct.title}}</h2>
+  <p>
+    {{selectedProduct.brand}}<br>
+    {{selectedProduct.price}}<br>
+    {{selectedProduct.sale}}<br>
+    {{selectedProduct.description}}<br>
+    {{selectedProduct.image}}<br>
+    {{selectedProduct.category}}<br>
+  </p>
+  {{update-product update="update" delete="delete" product=selectedProduct}}
+{{/if}}
+<hr>
+
+{{#each model as |product|}}
+  <h4 {{action 'showProduct' product}}>{{product.title}}</h4>
+{{/each}}
