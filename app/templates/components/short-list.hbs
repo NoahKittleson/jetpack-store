@@ -1,4 +1,4 @@
-<h3>Products</h3>
+<h3>Current Store Products</h3>
 
 {{#if selectedProduct}}
   <h2>{{selectedProduct.title}}</h2>
@@ -14,6 +14,9 @@
 {{/if}}
 <hr>
 
-{{#each model as |product|}}
-  <h4 {{action 'showProduct' product}}>{{product.title}}</h4>
-{{/each}}
+<h4>Click an item below to edit or delete:</h4>
+<ul class="admin-list">
+  {{#each model as |product|}}
+    <li {{action 'showProduct' product}}>{{product.title}}</li>
+  {{/each}}
+</ul>

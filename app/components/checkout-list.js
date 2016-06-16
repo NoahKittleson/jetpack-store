@@ -7,7 +7,6 @@ export default Ember.Component.extend({
 
     for (var i = 0; i < list.length; i++) {
       total += list[i].get('price') - (list[i].get('price') * (list[i].get('sale')/100));
-      console.log(total);
     }
     return total;
   })

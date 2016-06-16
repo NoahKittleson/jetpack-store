@@ -2,5 +2,11 @@
   {{ display-cart item=item }}
 {{/each}}
 
-<h3>Total:</h3>
-{{totalPrice}}
+<div class="row">
+  <div class="col-xs-3 col-xs-offset-9">
+    {{#if totalPrice}}
+      <h3>Total:</h3>
+      ${{totalPrice}}
+    {{/if}}
+  </div>
+</div>

@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   actions: {
     showProduct(product) {
       this.set('selectedProduct', product);
+
     },
     update(params, product) {
       this.sendAction('update', params, product);

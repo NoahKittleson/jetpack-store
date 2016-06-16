@@ -1,4 +1,25 @@
-<h5>cart item</h5>
-{{item.title}}  -- ${{item.price}} == ${{actualPrice}}
+<div class="row">
+  <div class="col-md-3">
+    {{item.title}}
+  </div>
+  <div class="col-md-3">
+      Regular Price:<br>
+      {{#if item.sale}}
+        $<strike>{{item.price}}</strike>
+      {{else}}
+        ${{item.price}}
+      {{/if}}
+  </div>
+  <div class="col-md-3">
+    {{#if item.sale}}
+    <br>
+      {{item.sale}}% OFF =
+    {{/if}}
+  </div>
+  <div class="col-md-3">
+    Actual Price:<br>
+    ${{actualPrice}}
+  </div>
+</div>
 <br>
-{{item.sale}}%
+<hr>
