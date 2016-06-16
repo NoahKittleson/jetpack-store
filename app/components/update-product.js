@@ -15,7 +15,7 @@ export default Ember.Component.extend({
         image: this.get('newImage'),
         description: this.get('newDescription'),
         category: this.get('newCategory')
-      }
+      };
       this.set('updateForm', false);
       this.sendAction('update', params, product);
     },
