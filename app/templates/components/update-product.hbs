@@ -2,25 +2,25 @@
 {{#if updateForm}}
   <form>
     <label for="newTitle">new Title</label>
-    {{input value=newTitle id="newTitle"}}<br>
+    {{input value=product.title id="newTitle"}}<br>
 
     <label for="newBrand">new Brand</label>
-    {{input value=newBrand id="newBrand"}}<br>
+    {{input value=product.brand id="newBrand"}}<br>
 
     <label for="newPrice">new Price</label>
-    {{input value=newPrice id="newPrice"}}<br>
+    {{input value=product.price id="newPrice"}}<br>
 
     <label for="newSale">new Sale</label>
-    {{input value=newSale id="newSale"}}<br>
+    {{input value=product.sale id="newSale"}}<br>
 
     <label for="newDescription">new Description</label>
-    {{input value=newDescription id="newDescription"}}<br>
+    {{input value=product.description id="newDescription"}}<br>
 
     <label for="newImage">new Image</label>
-    {{input value=newImage id="newImage"}}<br>
+    {{input value=product.image id="newImage"}}<br>
 
     <label for="newCategory">new Category</label>
-    {{input value=newCategory id="newCategory"}}<br>
+    {{input value=product.category id="newCategory"}}<br>
 
     <button type="button" {{action "update" product}}>Save</button>
   </form>

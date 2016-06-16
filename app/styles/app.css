@@ -2,7 +2,7 @@
   color: blue;
 }
 
-img {
+.tiles img {
   width: 100%;
   height: 400px;
 }
@@ -14,4 +14,27 @@ img {
 .admin-list {
   list-style-position: outside;
   font-size: 1.2em;
+}
+
+.editing-item {
+  color: #50C878;
+}
+
+.admin-img {
+  width: 100%;
+}
+
+.cart-img {
+  height: 100px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart {
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }

@@ -20,7 +20,9 @@ export default Ember.Component.extend({
       this.sendAction('update', params, product);
     },
     delete(product) {
-      this.sendAction('delete', product);
+      if (confirm('Are you sure you want to delete this product?')) {
+        this.sendAction('delete', product);
+      }
     }
   }
 });
