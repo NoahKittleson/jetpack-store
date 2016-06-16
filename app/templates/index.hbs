@@ -11,9 +11,11 @@
   </div>
 
   <div class="col-xs-10">
-    {{#each model as |product|}}
-      {{product-display product=product}}
-    {{/each}}
+    <div class="row">
+      {{#each model as |product|}}
+        {{product-display product=product}}
+      {{/each}}
+    </div>
   </div>
 
 </div>

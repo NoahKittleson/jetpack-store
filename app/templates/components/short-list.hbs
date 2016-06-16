@@ -3,7 +3,6 @@
 <div class="row">
   {{#if selectedProduct}}
   <div class="col-xs-8">
-
     <h2 class="editing-item">{{selectedProduct.title}}</h2>
     <p>
       <strong>Brand:</strong> {{selectedProduct.brand}}<br>
@@ -14,7 +13,6 @@
       <strong>Category:</strong> {{selectedProduct.category}}<br>
     </p>
     {{update-product update="update" delete="delete" product=selectedProduct}}
-
     <hr>
   </div>
   <div class="col-xs-4">
@@ -26,14 +24,12 @@
 <div class="row">
   <h4>Click an item below to edit or delete:</h4>
   <ul class="admin-list">
-
     {{#each model as |product|}}
-    {{#if (eq product selectedProduct)}}
-    <li {{action 'showProduct' product}} class= "editing-item">{{product.title}}</li>
-    {{else}}
-    <li {{action 'showProduct' product}}>{{product.title}}</li>
-    {{/if}}
+      {{#if (eq product selectedProduct)}}
+        <li {{action 'showProduct' product}} class= "editing-item">{{product.title}}</li>
+      {{else}}
+        <li {{action 'showProduct' product}}>{{product.title}}</li>
+      {{/if}}
     {{/each}}
-
   </ul>
 </div>

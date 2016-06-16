@@ -3,12 +3,13 @@
 }
 
 .tiles img {
-  width: 100%;
-  height: 400px;
+  max-width: 100%;
+  height: 300px;
 }
 
 .tiles {
   padding: 10px;
+  /*height: 500px;*/
 }
 
 .admin-list {
@@ -26,10 +27,12 @@
 
 .cart-img {
   height: 100px;
-  max-width: 100%;
+  max-width: 90%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .cart {
@@ -37,4 +40,6 @@
   display: inline-block;
   vertical-align: middle;
   float: none;
+  margin-left: 0px;
+  margin-right: 0px;
 }

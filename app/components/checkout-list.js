@@ -1,12 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  totalPrice: Ember.computed('items.[]', function() {
-    var list = this.get('items');
+  totalPrice: Ember.computed('products.change', function() {
+    var list = this.get('products.items');
     var total = 0;
 
     for (var i = 0; i < list.length; i++) {
-      total += list[i].get('price') - (list[i].get('price') * (list[i].get('sale')/100));
+      var salePrice = list[i].item.get('price') - list[i].item.get('price') * (list[i].item.get('sale')/100);
+      total += salePrice * list[i].amount;
     }
     return total;
   })

@@ -1,28 +1,29 @@
-<div class="row">
-  <div class="col-xs-2 cart">
-    <strong>{{item.title}}</strong>
-  </div>
-  <div class="col-xs-2 cart">
-    <img src={{item.image}} class="cart-img"/>
-  </div>
-  <div class="col-xs-2 cart">
-    Regular Price:<br>
-    {{#if item.sale}}
-      $<strike>{{item.price}}</strike>
-    {{else}}
-      ${{item.price}}
-    {{/if}}
-  </div>
-  <div class="col-xs-2 cart">
-    {{#if item.sale}}
-      <br>
-      {{item.sale}}% OFF =
-    {{/if}}
-  </div>
-  <div class="col-xs-2 cart">
-    Actual Price:<br>
-    ${{actualPrice}}
-  </div>
-  <br>
-  <hr>
+<div class="col-xs-2 cart">
+  <strong>{{product.item.title}}</strong>
 </div>
+<div class="col-xs-2 cart">
+  <img src={{product.item.image}} class="cart-img"/>
+</div>
+<div class="col-xs-2 cart">
+  Regular Price:<br>
+  {{#if product.item.sale}}
+  $<strike>{{product.item.price}}</strike>
+  {{else}}
+  ${{product.item.price}}
+  {{/if}}
+</div>
+<div class="col-xs-2 cart">
+  {{#if product.item.sale}}
+  <br>
+  {{product.item.sale}}% OFF =
+  {{/if}}
+</div>
+<div class="col-xs-1 cart">
+  x {{product.amount}}
+</div>
+<div class="col-xs-2 cart">
+  Actual Price:<br>
+  ${{actualPrice}}
+</div>
+<br>
+<hr>
