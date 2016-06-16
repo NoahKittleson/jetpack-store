@@ -2,6 +2,9 @@ body {
   background-color: #EBAAAC;
 }
 
+.saleClass {
+  color: #990000;;
+}
 
 .row-eq-height {
   display: -webkit-box;
